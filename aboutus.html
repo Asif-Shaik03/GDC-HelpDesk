@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC HelpDesk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script defer src="javascript/activeani.js"></script>
+<style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+  min-height: 100vh;
+}
+body .bdy{
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 30px;
+  padding: 0;
+}
+
+.section-main{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url(css/images/bg2.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.section-main h1{
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.837);
+  font-size: 41px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+header{
+  font-family: "Poppins", sans-serif;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 45px;
+  transition: 0.6s;
+}
+
+header.sticky{
+  background: #001018;
+  padding: 15px 45px;
+}
+
+header .brand{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+header.sticky .brand{
+  font-size: 29.5px;
+}
+
+header .menu{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:hover{
+  color: #000;
+  background: #fff;
+}
+
+a:is(:link, :active, :visited).active{
+  background-color: #fff;
+  color: #000;
+}
+header .btn{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: 0.3s;
+}
+header .btn:hover{
+  color: #000;
+  background: #fff;
+}
+header .close-btn{  
+  border-radius: 25px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  transition: 0.3s;
+}
+header .close-btn:hover{
+  color: #000;
+  background: #fff;
+
+}
+
+
+@media (max-width: 1060px){
+  header .btn{
+    display: block;
+  }
+
+  header .menu{
+    position: fixed;
+    background: #001018;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.6s;
+    transition-property: right;
+  }
+
+  header .menu.active{
+    right: 0;
+  }
+
+  header .menu .close-btn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a{
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 630px){
+  .section-main h1{
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+.footer {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  background-color: #041c29;
+  color:#fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+@media (max-width: 360px) {
+  header .brand {
+    font-size: 27px;
+  }
+
+  header.sticky .brand {
+    font-size: 26px;
+  }
+
+  header .menu {
+    position: fixed;
+    background: #001018;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: -112%;
+    padding: 80px 50px;
+    transition: 0.6s;
+    transition-property: right;
+  
+  }
+
+  header .menu.active {
+    right: 0;
+  }
+
+  header .menu .close-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+    margin-left: 50px;
+  }
+
+  header .menu a {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+  
+}
+
+
+       h1 {
+            color: #008080;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .team-member {
+            font-weight: bold;
+        }
+
+        .team-member-role {
+            color: #008080;
+        }
+
+        .team-member-desc {
+            margin-left: 20px;
+        }
+
+        .team-member-img {
+            max-width: 150px;
+            border-radius: 20%;
+            margin-bottom: 10px;
+        }
+</style>
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html" class="brand">GDC HelpDesk</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        
+        <a href="index.html">Home</a>
+        <a href="issue.html">Issue</a>
+        <a href="issuetracker.html">Issue Tracker</a>
+        <a href="reslog.php">Result</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+      <h1>about us</h1>
+    </section>
+
+<div class="bdy">
+    <h1>About Us</h1>
+    <p>Welcome to GDC Helpdesk - your go-to solution for assisting and solving student problems. Our website is a final year project developed by a group of dedicated students from Government Degree College pursuing their 3rd B.Sc degree.</p>
+    <p>The minds behind this innovative platform are:</p>
+    <div class="team-member-desc">
+        <img src="css/images/amar.jpg" alt="P. Amarnath" class="team-member-img">
+        <h2 class="team-member">P. Amarnath</h2>
+        <p class="team-member-role" style="color: #000;">M.S.Cs</p>
+        <p class="team-member-role">Web Developer</p>
+        <p>P. Amarnath is our coding wizard, responsible for creating the front-end interface and back-end of GDC Helpdesk website and making sure everything runs smoothly and efficiently.</p>
+    </div>
+
+    <div class="team-member-desc">
+        <img src="css/images/kamal.jpg" alt="A. Kamalakar" class="team-member-img">
+        <h2 class="team-member">A. Kamalakar</h2>
+        <p class="team-member-role" style="color: #000;">M.S.Cs</p>
+        <p class="team-member-role">Idea & Designer</p>
+        <p>A. Kamalakar is the visionary behind GDC Helpdesk Website. He came up with the brilliant idea for the platform and contributed to its captivating design.</p>
+    </div>
+
+    <div class="team-member-desc">
+        <img src="css/images/kranthi.jpg" alt="S. Kranthi Kumar" class="team-member-img">
+        <h2 class="team-member">S. Kranthi Kumar</h2>
+        <p class="team-member-role" style="color: #000;">M.S.Cs</p>
+        <p class="team-member-role">Technical Support</p>
+      <p>S. Kranthi kumar is the compassionate problem-solver of GDC Helpdesk website. With a keen understanding of student issues, he provides empathetic support, making users feel valued and heard.</p>
+    </div>
+
+
+    <div class="team-member-desc">
+      <img src="css/images/asif.jpg" alt="S. Asif" class="team-member-img">
+      <h2 class="team-member">S. Asif</h2>
+      <p class="team-member-role" style="color: #000;">M.P.Cs</p>
+      <p class="team-member-role">Database Management</p>
+        <p>S. Asif Helped in this project creating database and instrumental in creating and managing the database and tables to store the data for GDC Helpdesk Website.</p>
+  </div>
+
+    <div class="team-member-desc">
+        <img src="css/images/jaga.jpg" alt="K. Jagadesh" class="team-member-img">
+        <h2 class="team-member">K. Jagadesh</h2>
+        <p class="team-member-role" style="color: #000;">M.P.Cs</p>
+        <p class="team-member-role">Technical Support</p>
+        <p>K. Jagadesh Helped in this project resolving complex technical and He keeps the platform running smoothly and handles any technical challenges that come our way.</p>
+    </div>
+
+
+    <div class="team-member-desc">
+      <img src="css/images/balaji.jpg" alt="P. Balaji" class="team-member-img">
+      <h2 class="team-member">P. Venkata Balaji</h2>
+      <p class="team-member-role" style="color: #000;">M.S.Cs</p>
+      <p class="team-member-role">Support</p>
+      <p>P. Venkata Balaji is the friendly and reliable support member of our team. He's always ready to lend a helping hand to users, ensuring they have a smooth experience.</p>
+  </div>
+
+    <p>This project was born out of a shared passion for helping fellow students overcome challenges they face in their academic journey. We understand the complexities and issues students often encounter, and our mission is to provide effective solutions and guidance through this user-friendly platform.</p>
+    <p>At GDC Helpdesk, we aim to foster a supportive and collaborative environment, where students can seek assistance, share knowledge, and find answers to their academic queries. Our team is committed to continuously improving and expanding our services to meet the diverse needs of students.</p>
+    <p>Whether you're struggling with a tough assignment, need advice on exam preparation, or seeking career guidance, GDC Helpdesk is here to lend a helping hand. Together, let's pave the way for a successful academic journey.</p>
+  </div>
+
+
+    <footer class="footer">
+        <p>Copyright © 2023 GDC HelpDesk</p>
+      </footer>
+  
+      <script type="text/javascript" src="javascript/stickyresnav.js"></script>
+    </body>
+  </html>

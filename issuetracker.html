@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC HelpDesk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script defer src="javascript/activeani.js"></script>
+
+<style>
+  
+      input{
+        display: inline-block;
+        font-size: 15px;
+        box-sizing: border-box;
+        transition: .5s;
+      }
+      input[type="text"]{
+        background-color: #fff;
+        width: 560px;
+        height: 40px;
+        border: none;
+        outline: none;
+        padding: 0 29px;
+        border-radius: 25px 0 0 25px;
+      }
+      input[type="submit"]{
+        position: relative;
+        left: -5px;
+        border-radius: 0 25px 25px 0;
+        width: 150px;
+        height: 40px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #041c29 ;
+        color: #fff;
+      }
+      @media (max-width: 1060px){
+        input[type="text"]{
+          width: 310px;
+        }
+        input[type="submit"]{
+          width: 100px;
+        }
+
+      }
+      @media (max-width: 630px){
+
+        input[type="text"]{
+          width: 210px;
+        }
+        input[type="submit"]{
+          width: 68px;
+        }
+      }
+      @media (max-width: 360px){
+
+        input{
+          font-size: 6px;
+        }
+
+        input[type="text"]{
+          width: 120px;
+          height: 30px;
+        }
+        input[type="submit"]{
+          width: 35px;
+          height: 30px;
+        }
+        }
+</style>
+
+</head>
+  <body>
+
+    <header>
+      <a href="index.html" class="brand">GDC HelpDesk</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        
+        <a href="index.html">Home</a>
+        <a href="issue.html">Issue</a>
+        <a href="issuetracker.html">Issue Tracker</a>
+        <a href="reslog.php">Result</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+
+    <section class="section-main">
+      <form action="searchid.php" method="post">
+        <input type="text" name="issue_id" id="issueId" placeholder="Enter your complaint id...">
+        <input type="submit" value="Search">
+      </form>
+    </section>
+    <footer class="footer">
+        <p>Copyright © 2023 GDC HelpDesk</p>
+      </footer>
+  
+      <script type="text/javascript" src="javascript/stickyresnav.js"></script>
+    </body>
+  </html>

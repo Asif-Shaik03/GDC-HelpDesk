@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDC HelpDesk</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script defer src="javascript/activeani.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <a href="index.html" class="brand">GDC HelpDesk</a>
+      <div class="menu">
+        <div class="btn">
+          <i class="fas fa-times close-btn"></i>
+        </div>
+        <a href="index.html">Home</a>
+        <a href="issue.html">Issue</a>
+        <a href="issuetracker.html">Issue Tracker</a>
+        <a href="reslog.php">Result</a>
+        <a href="aboutus.html">About Us</a>
+      </div>
+      <div class="btn">
+        <i class="fas fa-bars menu-btn"></i>
+      </div>
+    </header>
+    <section class="section-main">
+      <h1>Government Degree College, Rajampet</h1>
+    
+    
+    </section>
+    <h2>What's Your Problem</h2>
+    <p>Feel free to submit your issue here.</p><br>
+
+  <div>
+    <br>
+    <form action="issuedata.php" method="post">
+        <label for="student-name">Student Name:</label>
+        <input type="text" id="student-name" name="username" placeholder="Enter your Name" required>
+      
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="emailid" placeholder="Enter your Email">
+      
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+          <option value="">--Select--</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Unknown">Prefer not to say</option>
+          </select>
+      
+      
+        <label for="group-dropdown">Group:</label>
+        <select id="group-dropdown" name="group-dropdown" required>
+          <option value="">--Select--</option>
+          <option value="MPC">MPC</option>
+          <option value="MSCS">MSCs</option>
+          <option value="MPCS">MPCs</option>
+          <option value="BZC">BZC</option>
+          <option value="BCCS">BCCs</option>
+          <option value="BA">BA</option>
+          <option value="B.com">B.com</option>
+          <option value="B.com Gen">B.com Gen</option>
+        </select>
+        <label for="year-dropdown" id="year-dropdown-label" style="display: none;">Year:</label>
+        <select id="year-dropdown" name="year-dropdown" style="display: none;" required>
+          <option value="">--Select--</option>
+        </select>
+        <label for="problem-category-dropdown">Issue Category:</label>
+        <select id="problem-category-dropdown" name="problem-category-dropdown" required>
+          <option value="">--Select--</option>
+          <option value="Library">Library</option>
+          <option value="Raging">Raging</option>
+          <option value="Classes">Classes</option>
+          <option value="Syllabus">Syllabus</option>
+          <option value="Lab">Lab</option>
+          <option value="Faculty">Faculty</option>
+          <option value="Others">Others</option>
+        </select>
+        <label for="problem-description" id="problem-description-label" style="display: none;">What's Your Issue:</label>
+        <textarea id="problem-description" name="problem-description" style="display: none;" placeholder="Explain your issue in few lines"></textarea>
+        <br>
+        <div class="button-container">
+          <input type="submit" value="SUBMIT" name="submit">
+          <input type="reset" value="CANCEL" name="cancel">
+        </div>
+      <br><br><br>
+      </form>
+  </div>  
+  <footer class="footer">
+    <p>Copyright © 2023 GDC HelpDesk</p>
+  </footer>
+
+    <script type="text/javascript" src="javascript/stickyresnav.js"></script>
+    <script src="javascript/grpdpdn.js"></script>
+
+  </body>
+</html>
